@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 100vh;
+    opacity: 90%;
+    /*background: color, url, repeat, position, size, attachment, origin*/
+    background: #1591c2 url(./img/studio-ghibli-logo.svg) no-repeat center / 80% fixed content-box;
+    
+
+  /*background-image: url(./img/studio-ghibli-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-color: #1591c2; */
+} 
+
+.header-a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-a:hover {
+    opacity: 0.7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    padding-top: 40px;
+}
+
+.nav-logo {
+    height: 80px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-list li {
+    font-size: 16px;
+    margin-left: 32px;
+    opacity: 90%;
+}
+
+
+
+.nav-list li a::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: rgb(34, 34, 230);
+    bottom: 0;
+    top: 20px;
+    transition: top .3s;
+}
+
+.nav-list li a:hover::before {
+    width: 100%;
+    bottom: 0;
+    top: 25px;
+}
+
+.seçao-main-aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 6%;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 90vh;
+    flex: 1;
+    gap: 20px;
+}
+
+.main-titulo {
+    font-size: 32px;
+}
+
+.main-logo {
+    height: 140px;
+}
+
+main p {
+    font-size: 16px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside div {
+    height: 90vh;
+    width: 35vw;
+    background: url(./img/HayaoMiyazakiQuote.jpg) no-repeat center / cover;
+
+  /*background-image: url(./img/HayaoMiyazakiQuote.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+.aside-titulo {
+    justify-content: center;
+    font-size: 32px;
+    width: 100%;
+}
+
+@media screen and (max-width: 940px) {
+    aside div {
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-position: center;
+    }
+    .seçao-main-aside {
+        flex-direction: column;
+    }
+}
+
+.seçao-filmografia {
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+    gap: 30px;
+}
+
+.filmografia-titulo {
+    font-size: 32px;
+}
+
+.filmografia-filmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.filmografia-filmes div {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: top;
+    gap: 10px;
+}
+
+.filmografia-filmes div img {
+    height: 250px;
+}
+
+.filmografia-filmes div a {
+    font-size: 14px;
+    font-family: serif;
+    text-decoration: none;
+    color: rgb(65, 132, 255);
+}
+
+.filmografia-filmes div a:hover {
+    opacity: 0.7;
+    color: rgb(44, 44, 44);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    height: 100px;
+    background-color: rgb(31, 31, 31);
+}

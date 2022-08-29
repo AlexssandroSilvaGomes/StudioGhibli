@@ -54,8 +54,7 @@ nav {
 }
 
 .nav-list li {
-    font-size: 16px;
-    margin-left: 32px;
+    font-size: 1rem;
     opacity: 90%;
 }
 
@@ -97,7 +96,7 @@ main {
 }
 
 .main-titulo {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .main-logo {
@@ -105,7 +104,7 @@ main {
 }
 
 main p {
-    font-size: 30px;
+    font-size: 1.75rem;
 }
 
 aside {
@@ -127,21 +126,10 @@ aside div {
 
 .aside-titulo {
     justify-content: center;
-    font-size: 32px;
+    font-size: 2rem;
     width: 100%;
 }
 
-@media screen and (max-width: 940px) {
-    aside div {
-        width: 100%;
-        height: 400px;
-        background-size: contain;
-        background-position: center;
-    }
-    .seçao-main-aside {
-        flex-direction: column;
-    }
-}
 
 .seçao-filmografia {
     display: flex;
@@ -151,7 +139,7 @@ aside div {
 }
 
 .filmografia-titulo {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .filmografia-filmes {
@@ -195,5 +183,47 @@ footer {
     color: #fff;
     font-size: 12px;
     height: 100px;
+    width: 100vw;
     background-color: rgb(31, 31, 31);
+}
+
+/* Tablet */
+@media (max-width: 940px) {
+    aside div {
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-position: center;
+    }
+    .seçao-main-aside {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .nav-logo {
+        height: 8vh;
+    }
+    .nav-list {
+        gap: 30px;
+    }
+    .nav-list li {
+        font-size: 0.9rem;
+    }
+    main p {
+        font-size: 1rem;
+    }
+    aside div {
+        background: url(./img/HayaoMiyazakiQuote.jpg) no-repeat center / cover;
+    }    
+    .filmografia-filmes {
+        padding: 20px;
+    }
+    .filmografia-filmes div img {
+        height: 200px;
+    }
+    .filmografia-filmes div {
+        width: 100px;
+    }
 }

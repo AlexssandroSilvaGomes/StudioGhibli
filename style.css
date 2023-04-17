@@ -156,12 +156,14 @@ aside div {
     width: 180px;
     text-align: center;
     align-items: center;
-    justify-content: top;
+    justify-content: space-around;
     gap: 10px;
 }
 
 .filmografia-filmes div img {
     height: 250px;
+    width: 100%;
+    padding: 2px;
 }
 
 .filmografia-filmes div a {
@@ -169,6 +171,14 @@ aside div {
     font-family: serif;
     text-decoration: none;
     color: rgb(65, 132, 255);
+}
+
+.filmografia-filmes div:Hover {
+    transition: 0.3s;
+    cursor: pointer;
+    transform: perspective(900px) scale(1.2) rotateX(10deg) rotateY(-20deg) rotateZ(5deg);
+    box-shadow: 10px 10px 10px grey;
+    background-color: white;
 }
 
 .filmografia-filmes div a:hover {
@@ -183,7 +193,7 @@ footer {
     color: #fff;
     font-size: 12px;
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(31, 31, 31);
 }
 
